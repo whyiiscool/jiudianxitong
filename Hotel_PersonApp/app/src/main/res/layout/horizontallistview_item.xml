@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/iv_me_function"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="11px"
+        android:background="@mipmap/me_0"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+    />
+
+    <TextView
+        android:id="@+id/tv_me_function"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:textColor="#404040"
+        android:layout_marginLeft="22px"
+        android:text="我的优惠券"
+        android:textSize="11dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@id/iv_me_function"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+</RelativeLayout>

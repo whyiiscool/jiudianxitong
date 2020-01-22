@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical"
+    android:background="@mipmap/main_activity_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="245dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="1dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_background"
+                android:focusable="true"
+                android:hint="Uesrname"
+                android:paddingLeft="35dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="#bab5b5"
+                android:textColorHint="#bab5b5" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/et_username"
+                android:layout_alignBottom="@+id/et_username"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginBottom="11dp"
+                android:background="@mipmap/main_activity_user" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_background"
+                android:focusable="true"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="35dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="#bab5b5"
+                android:textColorHint="#bab5b5" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/et_password"
+                android:layout_alignBottom="@+id/et_password"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginBottom="11dp"
+                android:background="@mipmap/main_activity_lock" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="800px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40px"
+            android:background="@drawable/login_btn_background"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+        <RelativeLayout
+            android:layout_width="800px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游客登录"
+                android:textColor="#e25a66" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="700px"
+                android:text="注册"
+                android:textColor="#e25a66" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

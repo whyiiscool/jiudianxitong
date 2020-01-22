@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_hotel"
+        android:icon="@drawable/tab_sign_selector"
+        android:title="预订" />
+
+    <item
+        android:id="@+id/navigation_record"
+        android:icon="@drawable/tab_record_selector"
+        android:title="订单" />
+
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@drawable/tab_contact_selector"
+        android:title="活动" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/tab_setting_selector"
+        android:title="我的" />
+
+</menu>
