@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.example.hotel_personapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SDKInitializer.initialize(getApplicationContext());
         mbtnlogin = findViewById(R.id.btn_login);
         mbtnlogin.setOnClickListener(new View.OnClickListener() {
             @Override

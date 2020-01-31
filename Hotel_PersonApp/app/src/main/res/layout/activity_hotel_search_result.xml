@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HotelSearchResultActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hcity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="活动"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:paddingTop="5dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:src="@mipmap/hguanggao"/>
+
+    <ListView
+        android:id="@+id/lv_hotelres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>
