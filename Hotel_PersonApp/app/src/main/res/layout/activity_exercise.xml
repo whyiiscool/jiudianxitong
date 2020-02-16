@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ExerciseActivity"
+    android:orientation="vertical">
+<!--    android:background="@mipmap/exe_back"-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="健身活动"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:textAlignment="center"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="旗下酒店提供如下服务："
+            android:textColor="#151516"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_exemachine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="器械介绍"
+            android:textColor="#f6f6f6"
+            android:textSize="55dp"
+            android:background="@mipmap/exe_tv_back1"
+            android:paddingTop="20dp"
+            android:textAlignment="center"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_exeplan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="健身计划"
+            android:textColor="#f5f6f2"
+            android:textSize="55dp"
+            android:background="@mipmap/exe_tv_back2"
+            android:paddingTop="20dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tv_exefood"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="健身食谱"
+            android:textColor="#f3f4f5"
+            android:textSize="55dp"
+            android:background="@mipmap/exe_tv_back3"
+            android:textAlignment="center"
+            android:paddingTop="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></LinearLayout>
+
+</LinearLayout>

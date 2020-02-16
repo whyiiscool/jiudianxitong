@@ -1,33 +1,23 @@
 package com.example.hotel_personapp.activity;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
+import android.text.TextUtils;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+
 
 import com.example.hotel_personapp.Adapter.BottomViewAdapter;
-import com.example.hotel_personapp.Adapter.TitleFragmentPagerAdapter;
 import com.example.hotel_personapp.Fragment.ActivityFragment;
 import com.example.hotel_personapp.Fragment.BlankFragment;
 import com.example.hotel_personapp.Fragment.HotelFragment;
 import com.example.hotel_personapp.Fragment.MeFragment;
 import com.example.hotel_personapp.Fragment.RecordFragment;
 import com.example.hotel_personapp.R;
-import com.example.hotel_personapp.loader.GlideImageLoader;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,10 +59,20 @@ public class IndexActivity extends AppCompatActivity implements HotelFragment.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigation);
         viewPager = findViewById(R.id.viewpager);
         setNavigation();
-        viewPager.setCurrentItem(0);
+
+
+        String waitPayFlag = getIntent().getStringExtra("waitPayFlag") ;
+        if(!TextUtils.isEmpty(waitPayFlag)){
+            if ("4".equals(waitPayFlag)) {
+                // 这里设置要跳转到第几个fragment
+                viewPager.setCurrentItem(3);
+            }
+        }else{
+            viewPager.setCurrentItem(0);
+        }
     }
 
     private void setNavigation(){

@@ -24,11 +24,9 @@ import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
-import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
-import com.baidu.mapapi.search.poi.PoiAddrInfo;
 import com.baidu.mapapi.search.poi.PoiCitySearchOption;
 import com.baidu.mapapi.search.poi.PoiDetailResult;
 import com.baidu.mapapi.search.poi.PoiDetailSearchResult;
@@ -38,7 +36,10 @@ import com.baidu.mapapi.search.poi.PoiSearch;
 import com.example.hotel_personapp.Adapter.HorizontalListViewAdapter;
 import com.example.hotel_personapp.R;
 import com.example.hotel_personapp.View.HorizontalListView;
+import com.example.hotel_personapp.activity.ExerciseActivity;
 import com.example.hotel_personapp.activity.HotelSearchResultActivity;
+import com.example.hotel_personapp.activity.MarketActivity;
+import com.example.hotel_personapp.activity.SignActivity;
 import com.example.hotel_personapp.loader.GlideImageLoader;
 import com.lljjcoder.style.citylist.CityListSelectActivity;
 import com.lljjcoder.style.citylist.bean.CityInfoBean;
@@ -47,7 +48,6 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -278,7 +278,7 @@ public class HotelFragment extends Fragment {
         //设置自动轮播，默认为true
         banner2.isAutoPlay(true);
         //设置轮播时间
-        banner2.setDelayTime(1500);
+        banner2.setDelayTime(4500);
         //设置指示器位置（当banner模式中有指示器时）
         banner2.setIndicatorGravity(BannerConfig.CENTER);
         //banner设置方法全部调用完毕时最后调用
@@ -297,6 +297,18 @@ public class HotelFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(view.getContext().getApplicationContext(),"点击了"+strings[position].toString(),Toast.LENGTH_LONG).show();
+                Intent intent = null;
+                switch(position){
+                    case 0: intent = new Intent(getView().getContext(),SignActivity.class);
+                        break;
+                    case 1: intent = new Intent(getView().getContext(),MarketActivity.class);
+                        break;
+                    case 2: intent = new Intent(getView().getContext(),MarketActivity.class);
+                        break;
+                    case 3: intent = new Intent(getView().getContext(),ExerciseActivity.class);
+                        break;
+                }
+                startActivity(intent);
             }
         });
     }
@@ -387,6 +399,7 @@ public class HotelFragment extends Fragment {
                 }
 
                 if (poiResult.error == SearchResult.ERRORNO.NO_ERROR){// 检索结果正常返回
+                    Log.d("状态码：",""+poiResult.error);
                     ArrayList<PoiInfo> list = new ArrayList<PoiInfo>();
                     for(int i=0;i<poiResult.getAllPoi().size();i++){
                         list.add(poiResult.getAllPoi().get(i));
@@ -469,13 +482,13 @@ public class HotelFragment extends Fragment {
             //以下只列举部分获取地址相关的结果信息
             //更多结果信息获取说明，请参照类参考中BDLocation类中的说明
 
-            String addr = location.getAddrStr();    //获取详细地址信息
+/*            String addr = location.getAddrStr();    //获取详细地址信息
             String country = location.getCountry();    //获取国家
-            String province = location.getProvince();    //获取省份
+            String province = location.getProvince();    //获取省份*/
             String city = location.getCity();    //获取城市
-            String district = location.getDistrict();    //获取区县
+/*            String district = location.getDistrict();    //获取区县
             String street = location.getStreet();    //获取街道信息
-            int errorCode = location.getLocType();
+            int errorCode = location.getLocType();*/
             Log.d(location.getAddrStr(),"................"+location.getLatitude());
 //          Log.d(location.getAddrStr(),"................"+errorCode);
             mtvlivecity.setText(city);

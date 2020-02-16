@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +30,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="8ZDld5qA72SHGvrL2oK1nGivFfMlSyWW"></meta-data>
+            android:value="8ZDld5qA72SHGvrL2oK1nGivFfMlSyWW" />
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -45,9 +46,22 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
-        <activity android:name=".activity.HotelSearchResultActivity"></activity>
+        <activity android:name=".activity.HotelSearchResultActivity" />
+        <activity android:name=".activity.SignActivity" />
+        <activity android:name=".activity.ExerciseActivity" />
+        <activity android:name=".activity.ExeMachineActivity" />
+        <activity android:name=".activity.ExePlanActivity" />
+        <activity android:name=".activity.ExeFoodActivity" />
+        <activity android:name=".activity.MarketActivity" />
+        <activity android:name=".activity.ChangePassActivity" />
+        <activity android:name=".activity.SuggestionActivity" />
+        <activity android:name=".activity.Hotel_Message_Activity" />
+        <activity android:name=".activity.PersonMessageActivity" />
+        <activity android:name=".activity.Change_personActivity" />
+        <activity android:name=".activity.MyCouponActivity" />
+        <activity android:name=".activity.MyCommentActivity"></activity>
     </application>
 
 </manifest>

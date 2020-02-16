@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Change_personActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="个人资料"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textAlignment="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/xingm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓        名"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/xingm"
+            android:hint="请输入姓名"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:background="@null"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/zhenj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="证件类型"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_zhenj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/zhenj"
+            android:paddingLeft="10dp"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_zhenj"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/zhenjian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="证件信息"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/zhenjian"
+            android:padding="10dp"
+            android:hint="0000*********000"
+            android:textSize="20dp"
+            android:background="@null"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/shouj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_shouj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/shouj"
+            android:text="13297425700"
+            android:paddingLeft="10dp"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_shouj"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/youx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电子邮箱"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/youx"
+            android:hint="kongbai@aa.com"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:background="@null"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="会员姓名和证件信息都仅允许修改一次；"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="会员所填信息必须与本人真实证件上的姓名和证件信息一致，才能保障享受会员权益；"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="如需再次修改请带上有效证件，在本品牌任一酒店前台处理；"/>
+
+    <Button
+        android:id="@+id/btn_changemymes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="完成"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="#f62525"/>
+
+</LinearLayout>
