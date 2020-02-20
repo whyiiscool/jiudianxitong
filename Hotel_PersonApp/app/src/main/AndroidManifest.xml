@@ -19,7 +19,37 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--打电话权限-->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 可选权限说明-->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+<!--    允许应用程序联网（必须）-->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+<!--    允许访问WiFi网络状态信息（必须）-->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
+<!--    允许读取手机状态（必须）-->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!--    允许访问网络状态（必须）-->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!--    允许写手机存储（必须）-->
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS" />
+<!--    GUI自动填充验证码功能（非必须）-->
+    <uses-permission
+        android:name="android.permission.READ_SMS" />
+<!--    从短信中读取验证码接口（非必须）-->
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS" />
+<!--    应用内好友功能（非必须）-->
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -30,7 +60,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="8ZDld5qA72SHGvrL2oK1nGivFfMlSyWW" />
+            android:value="VXhhkBGws8iYkCoxeOOS9d80GrEb9Pjt" />
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -47,6 +77,8 @@
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
+
+
 
         <activity android:name=".activity.HotelSearchResultActivity" />
         <activity android:name=".activity.SignActivity" />

@@ -4,10 +4,10 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.hotel_personapp"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -22,6 +22,8 @@ android {
             jni.srcDirs = []    //disable automatic ndk-build
         }
     }
+
+
 }
 
 repositories {
@@ -46,4 +48,15 @@ dependencies {
     compile 'liji.library.dev:citypickerview:5.2.0'
     implementation 'com.github.atuan07:CustomHotelCalender:V1.0.2'
     implementation files('libs/BaiduLBS_Android.jar')
+}
+
+apply plugin: 'com.mob.sdk'
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2e1807ee78f50"
+    appSecret "1ab2a5545ae94e98dff15db162efe0a8"
+    SMSSDK {
+        autoSMS true
+    }
 }
