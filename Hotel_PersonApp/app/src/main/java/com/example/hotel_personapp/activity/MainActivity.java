@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
-import com.example.hotel_personapp.BroadcastReceiver.SmsBroadcastReceiver;
+import com.example.hotel_personapp.BroadcastReceiver.SMSBroadcastReceiver;
 import com.example.hotel_personapp.R;
 import com.example.hotel_personapp.Utils.MyUtils;
 import com.mob.MobSDK;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mtvyzm;
     EditText metusername;
     EditText metpassword;
-    SmsBroadcastReceiver mSMSBroadcastReceiver;
+    SMSBroadcastReceiver mSMSBroadcastReceiver;
     IntentFilter filter;
 
     private int i = 30;//计时器
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.a);
         SDKInitializer.initialize(getApplicationContext());
         initView();//找到组件
-        mSMSBroadcastReceiver.setOnReceivedMessageListener(new SmsBroadcastReceiver.MessageListener() {
+        mSMSBroadcastReceiver.setOnReceivedMessageListener(new SMSBroadcastReceiver.MessageListener() {
 
             public void OnReceived(StringBuilder message) {
 
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         filter = new IntentFilter();
         filter.addAction("android.provider.Telephony.SMS_RECEIVED");
         //filter.setPriority(1000);
-        mSMSBroadcastReceiver = new SmsBroadcastReceiver();
+        mSMSBroadcastReceiver = new SMSBroadcastReceiver();
         //注册广播接收
         registerReceiver(mSMSBroadcastReceiver, filter);
     }

@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 
-public class SmsBroadcastReceiver extends BroadcastReceiver {
+public class SMSBroadcastReceiver extends BroadcastReceiver {
+
 
     private static MessageListener mMessageListener;
 
-    public SmsBroadcastReceiver() {
+    public SMSBroadcastReceiver() {
         super();
     }
 
