@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         //注册一个事件回调监听，用于处理SMSSDK接口请求的结果
+
         SMSSDK.registerEventHandler(eh);
 
     }
