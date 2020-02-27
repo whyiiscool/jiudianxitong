@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity"
     android:orientation="vertical"
-    android:background="@mipmap/main_activity_bg">
+    android:background="@mipmap/main_activity_bg"
+    android:weightSum="2">
 
     <LinearLayout
-        android:layout_width="382dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="245dp"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:background="#ffffff"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="15dp"
         android:paddingTop="1dp"
@@ -23,15 +24,6 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tv_1"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_background"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                />
 
             <EditText
                 android:id="@+id/et_username"
@@ -47,9 +39,31 @@
                 android:paddingBottom="10dp"
                 android:singleLine="true"
                 android:textColor="#bab5b5"
-                android:textColorHint="#bab5b5"
-                android:maxLength="11"/>
+                android:textColorHint="#bab5b5" />
 
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingBottom="15dp"
+                android:gravity="center_vertical"
+                android:background="#bab5b5"
+                android:layout_alignLeft="@+id/tv_yzm"/>
+
+
+            <TextView
+                android:id="@+id/tv_yzm"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignRight="@id/et_username"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="获取验证码"
+                android:textColor="#BB8C44"
+                android:textSize="16sp"
+                />
 
             <ImageView
                 android:layout_width="20dp"
@@ -89,30 +103,37 @@
                 android:layout_alignLeft="@+id/et_password"
                 android:layout_alignBottom="@+id/et_password"
                 android:layout_marginLeft="7dp"
-                android:layout_marginRight="1dp"
+                android:layout_marginRight="1.0dip"
                 android:layout_marginBottom="11dp"
                 android:background="@mipmap/main_activity_lock" />
 
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login_btn_background"
-            android:text="登录"
-            android:textColor="#ffffff"
-            android:textSize="17dp" />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40px"
+                android:background="@drawable/login_btn_background"
+                android:text="登录"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+
+        </RelativeLayout>
+
 
         <RelativeLayout
-            android:layout_width="270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="15px">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,4 +152,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

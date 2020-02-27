@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a);
+        setContentView(R.layout.activity_main);
         SDKInitializer.initialize(getApplicationContext());
         initView();//找到组件
         mSMSBroadcastReceiver.setOnReceivedMessageListener(new SMSBroadcastReceiver.MessageListener() {
@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 String phoneNum = metusername.getText().toString();
                 SMSSDK.submitVerificationCode("86", phoneNum, metpassword
                         .getText().toString());
-/*              Intent intent = null;
+                Intent intent = null;
                 intent = new Intent(MainActivity.this,IndexActivity.class);
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
         mtvyzm.setOnClickListener(new View.OnClickListener() {
@@ -131,8 +131,9 @@ public class MainActivity extends AppCompatActivity {
                 int i = msg.arg1;
                 int i1 = msg.arg2;
                 Object o = msg.obj;
-                /*Log.d("3","Handler");*/
-               /* Log.d("this","" + i);
+                /*Log.d("3","Handler");
+                Log.d("this","" + i);
+
                 Log.d("this","" + i1);
                 Log.d("this","" + o);*/
 
@@ -149,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
                     } else if (i == SMSSDK.EVENT_GET_VOICE_VERIFICATION_CODE) {
                         Toast.makeText(MainActivity.this, "正在获取验证码", Toast.LENGTH_SHORT).show();
                     }
+                }else{
+                    Log.d("错误码为：","-------"+o);
                 }
             }
         }
@@ -170,5 +173,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-

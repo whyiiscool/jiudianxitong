@@ -47,10 +47,6 @@
     <uses-permission
         android:name="android.permission.READ_CONTACTS" />
 <!--    应用内好友功能（非必须）-->
-
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,7 +56,10 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="VXhhkBGws8iYkCoxeOOS9d80GrEb9Pjt" />
+            android:value="8ZDld5qA72SHGvrL2oK1nGivFfMlSyWW" />
+<!--        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="VXhhkBGws8iYkCoxeOOS9d80GrEb9Pjt" />-->
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
